@@ -20,6 +20,13 @@ async function pageLoaded() {
 for(let i=0; i<json.length;i++){
 if(json[i].length>1){
    levelOfService="Noober Pool"
+   outputElement.insertAdjacentHTML("beforeend",`
+ 
+<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+ <i class="fas fa-car-side"></i>
+ <span>${levelOfService}</span>
+</h1>`)
+
   for(let j=0;j<json[i].length;j++){
   passengerName=json[i][j].passengerDetails.first +[" "]+ json[i][j].passengerDetails.last
   passengerPhone=json[i][j].passengerDetails.phoneNumber
@@ -31,11 +38,6 @@ if(json[i].length>1){
   
   
  outputElement.insertAdjacentHTML("beforeend",`
- 
-<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
- <i class="fas fa-car-side"></i>
- <span>${levelOfService}</span>
-</h1>
 
 <div class="border-4 border-gray-900 p-4 my-4 text-left">
  <div class="flex">
@@ -45,7 +47,7 @@ if(json[i].length>1){
    </div>
    <div class="w-1/2 text-right">
      <span class="rounded-xl bg-gray-600 text-white p-2">
-     ${passengerNumberOfPassengers}
+     ${passengerNumberOfPassengers} passengers
      </span>
    </div>
  </div>
@@ -62,7 +64,6 @@ if(json[i].length>1){
    </div>
  </div>
 </div>
-
  `)
 }
   } else if(json[i].length==1){
@@ -89,7 +90,7 @@ if(json[i].length>1){
        </div>
        <div class="w-1/2 text-right">
          <span class="rounded-xl bg-gray-600 text-white p-2">
-         ${passengerNumberOfPassengers}
+         ${passengerNumberOfPassengers} passengers
          </span>
        </div>
      </div>
@@ -130,7 +131,7 @@ if(json[i].length>1){
         </div>
         <div class="w-1/2 text-right">
           <span class="rounded-xl bg-purple-600 text-white p-2">
-          ${passengerNumberOfPassengers}
+          ${passengerNumberOfPassengers} passengers
           </span>
         </div>
       </div>
@@ -171,7 +172,7 @@ if(json[i].length>1){
         </div>
         <div class="w-1/2 text-right">
           <span class="rounded-xl bg-gray-600 text-white p-2">
-          ${passengerNumberOfPassengers}
+          ${passengerNumberOfPassengers} passengers
           </span>
         </div>
       </div>
