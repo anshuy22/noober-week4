@@ -47,7 +47,7 @@ if(json[i].length>1){
    </div>
    <div class="w-1/2 text-right">
      <span class="rounded-xl bg-gray-600 text-white p-2">
-     ${passengerNumberOfPassengers} passengers
+     ${passengerNumberOfPassengers} passenger
      </span>
    </div>
  </div>
@@ -67,7 +67,7 @@ if(json[i].length>1){
  `)
 }
   } else if(json[i].length==1){
-  if(json[i][0].numberOfPassengers>3){
+  if(json[i][0].numberOfPassengers>3 && json[i][0].purpleRequested==false){
       levelOfService="Noober XL"
   passengerName=json[i][0].passengerDetails.first +[" "]+ json[i][0].passengerDetails.last
   passengerPhone=json[i][0].passengerDetails.phoneNumber
@@ -107,7 +107,7 @@ if(json[i].length>1){
        </div>
      </div>
    </div> `)
-    } else if(json[i][0].numberOfPassengers<=3 && json[i][0].purpleRequested==true){
+    } else if(json[i][0].numberOfPassengers>=1 && json[i][0].purpleRequested==true){
       levelOfService="Noober Purple"
   passengerName=json[i][0].passengerDetails.first +[" "]+ json[i][0].passengerDetails.last
   passengerPhone=json[i][0].passengerDetails.phoneNumber
@@ -131,7 +131,7 @@ if(json[i].length>1){
         </div>
         <div class="w-1/2 text-right">
           <span class="rounded-xl bg-purple-600 text-white p-2">
-          ${passengerNumberOfPassengers} passengers
+          ${passengerNumberOfPassengers} passenger
           </span>
         </div>
       </div>
